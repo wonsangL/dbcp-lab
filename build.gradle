@@ -32,7 +32,7 @@ dependencies {
     implementation group: 'org.apache.tomcat', name: 'tomcat-jdbc', version: '10.0.14'
 
     // https://mvnrepository.com/artifact/com.zaxxer/HikariCP
-    implementation group: 'com.zaxxer', name: 'HikariCP', version: '5.0.0'
+    implementation group: 'com.zaxxer', name: 'HikariCP', version: '4.0.3'
 }
 
 test {
