@@ -39,4 +39,13 @@ public class DatabaseConfig {
         config.setPassword(password);
         return new HikariDataSource(config);
     }
+
+    @Bean
+    public org.apache.tomcat.dbcp.dbcp2.BasicDataSource tomcatDataSource() {
+        org.apache.tomcat.dbcp.dbcp2.BasicDataSource dataSource = new org.apache.tomcat.dbcp.dbcp2.BasicDataSource();
+        dataSource.setUrl(url);
+        dataSource.setUsername(userName);
+        dataSource.setPassword(password);
+        return dataSource;
+    }
 }

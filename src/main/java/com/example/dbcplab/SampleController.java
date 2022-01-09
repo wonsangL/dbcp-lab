@@ -20,4 +20,9 @@ public class SampleController {
     public Player findPlayerFromHikari(@RequestParam String name) {
         return service.findPlayerFromHikari(name);
     }
+
+    @GetMapping("/tomcat/players")
+    public Player findPlayerFromTomcat(@RequestParam String name) {
+        return service.findPlayerFromTomcat(name);
+    }
 }
