@@ -10,10 +10,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 public class SampleController {
     private final SampleService service;
-
-    @GetMapping("/commons/players")
-    public Player findPlayerFromCommons(@RequestParam String name) {
-        return service.findPlayerFromCommons(name);
+    
+    @GetMapping("/commons/v1/players")
+    public Player findPlayerFromCommonsV1(@RequestParam String name) {
+        return service.findPlayerFromCommonsV1(name);
+    }
+    
+    @GetMapping("/commons/v2/players")
+    public Player findPlayerFromCommonsV2(@RequestParam String name) {
+        return service.findPlayerFromCommonsV2(name);
     }
 
     @GetMapping("/hikari/players")

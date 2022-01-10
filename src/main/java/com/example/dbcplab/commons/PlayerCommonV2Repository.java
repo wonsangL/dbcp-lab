@@ -16,7 +16,7 @@ import java.time.LocalDateTime;
 
 @Repository
 @RequiredArgsConstructor
-public class PlayerCommonRepository {
+public class PlayerCommonV2Repository {
     private final BasicDataSource dataSource;
 
     @Nullable

@@ -20,9 +20,18 @@ public class DatabaseConfig {
 
     @Value("${spring.datasource.password}")
     private String password;
-
+    
     @Bean
-    public BasicDataSource commonsDataSource() {
+    public org.apache.commons.dbcp.BasicDataSource commonsV1DataSource() {
+        org.apache.commons.dbcp.BasicDataSource dataSource = new org.apache.commons.dbcp.BasicDataSource();
+        dataSource.setUrl(url);
+        dataSource.setUsername(userName);
+        dataSource.setPassword(password);
+        return dataSource;
+    }
+    
+    @Bean
+    public BasicDataSource commonsV2DataSource() {
         BasicDataSource dataSource = new BasicDataSource();
         dataSource.setUrl(url);
         dataSource.setUsername(userName);
